@@ -4,20 +4,20 @@ int main()
 {
     float x,y;
     char ch;
-    printf("enter initial amount:");
+    printf("** WELCOME TO ATM ** \n");
+    printf("Enter initial amount:");
     scanf("%f",&x);
-    printf("enter \n c for credit \n d for debit \n");
+    printf("Enter \n C for credit \n D for debit \n B for balance \n ");
     scanf("\n%c",&ch);
     switch(ch)
     {
-
-    case 'c':
+    case 'C':
         printf("enter credit amount: \n");
         scanf("%f",&y);
         x=x+y;
         printf("net amount=%f",x);
         break;
-    case 'd':
+    case 'D':
         printf("enter debit amount: \n");
         scanf("%f",&y);
         if(x>=y)
@@ -30,8 +30,13 @@ int main()
         printf("insufficient amount=%f",x);
         }
         break; 
+    case 'B':
+      printf("\n Your balance is= %f ", x);
+      break;
     default:
-        printf("choose correct option for operation");
+        printf("INVALID");
     }
+        printf( "\n*** THANKS FOR COMING!!!! *** \n");
+
     return 0;
 }
